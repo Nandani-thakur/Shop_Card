@@ -1,0 +1,133 @@
+/* Nav.css */
+
+/* Container styling */
+.container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 2rem;
+}
+
+/* Navbar brand styling */
+.leftside {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Added gap to separate elements */
+}
+
+/* Hide the menu icon on larger screens */
+.nav-toggle {
+  display: none;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Search bar styling */
+.btn_search {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.btn_search .form-control {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.btn_search .input-group-text {
+  background-color: transparent;
+  border: none;
+}
+
+/* Wishlist icon styling */
+button img {
+  filter: grayscale(100%); /* Ensure the icon remains grey */
+  color: pink; /* Additional styling to reinforce the grey color */
+  width: 24px;
+  height: 24px;
+}
+
+/* Remove search bar borders on focus */
+.btn_search .form-control:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.allproduct_btn,
+.bg-zinc-700 {
+  transition: background-color 0.3s ease;
+}
+
+.allproduct_btn:hover,
+.bg-zinc-700:hover {
+  background-color: #4a5568; /* Darker shade of the same color */
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* Show the menu icon */
+    margin-left: 10px;
+  }
+
+  .nav-links {
+    display: none; /* Hide the nav links */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white; /* Background color for dropdown */
+    z-index: 1;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show the nav links when the menu icon is clicked */
+  }
+
+  .btn_search {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .allproduct_btn,
+  .bg-zinc-700 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Responsive styling for screens between 767px and 990px */
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .nav-toggle {
+    display: none; /* Hide menu icon */
+  }
+
+  .nav-links {
+    display: flex; /* Ensure nav links are visible */
+    flex-direction: row; /* Align items horizontally */
+    gap: 20px; /* Adjust spacing between items */
+    align-items: center; /* Center items vertically */
+  }
+
+  .btn_search {
+    width: auto; /* Adjust width to fit content */
+    margin: 0 10px; /* Margin to fit within the container */
+  }
+
+  .allproduct_btn,
+  .bg-zinc-700 {
+    width: auto; /* Adjust width to fit content */
+    text-align: center;
+  }
+}

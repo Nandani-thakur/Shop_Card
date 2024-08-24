@@ -1,0 +1,15 @@
+/* custom-slider.css */
+.awssld {
+    background-color: #d1d1d138; 
+    filter: blur();
+    /* Change this to your desired background color */
+  }
+  
+  .awssld__wrapper {
+    background-color: transparent; /* Ensure the wrapper has a transparent background */
+  }
+  
+  .awssld__content {
+    background-color: transparent; /* Ensure the content has a transparent background */
+  }
+  
