@@ -82,13 +82,14 @@ button img {
   .nav-links {
     display: none; /* Hide the nav links */
     flex-direction: column;
-    width: 100%;
+    width: fit-content;
     position: absolute;
-    top: 60px;
-    left: 0;
+    top: 130px;
+    right: 0;
     background-color: white; /* Background color for dropdown */
     z-index: 1;
     padding: 10px;
+    border-radius: 10px;
   }
 
   .nav-links.active {
